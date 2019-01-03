@@ -1,6 +1,6 @@
 #include <iostream>
 
-int Fib(int Current)
+unsigned long Fib(unsigned long Current)
 {
 
     if(Current == 0){return 0;}
@@ -14,7 +14,7 @@ int Fib(int Current)
 
 int main()
 {
-    std::cout<<Fib(46)<<"\n";
+    std::cout<<Fib(66)<<"\n";
 }
 
 

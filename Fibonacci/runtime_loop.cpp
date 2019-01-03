@@ -1,12 +1,12 @@
 #include <iostream>
 
-int Fib(int Index)
+unsigned long Fib(unsigned long Index)
 {
-    int current = 0;
-    int prev1 = 1;
-    int prev2 = 0;
+    volatile unsigned long current = 0;
+    unsigned long prev1 = 1;
+    unsigned long prev2 = 0;
 
-    for(int currentIndex = 1; Index > currentIndex; ++currentIndex)
+    for(unsigned long currentIndex = 1; Index > currentIndex; ++currentIndex)
     {
         current = prev1 + prev2;
         prev2 = prev1;
@@ -17,6 +17,10 @@ int Fib(int Index)
 
 int main()
 {
-    std::cout<<Fib(46)<<"\n";
+    for(size_t i = 0; 66>= i; ++i)
+    {
+        std::cout<<Fib(i)<<"\n";
+        std::cout<<Fib(66-i)<<"\n";
+    }
     return 0;
 }
