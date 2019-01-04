@@ -1,7 +1,11 @@
-#include <iostream>
+#ifndef FIBCOMPTIME__HPP_
+#define FIBCOMPTIME__HPP_
+
 #include <array>
 #include <utility>
 
+namespace fib {
+namespace v1 {
 template<unsigned long Index>
 struct Fib
 {
@@ -34,14 +38,7 @@ unsigned long fib(const unsigned long i)
     return fib_impl(std::make_index_sequence<67>(), i);
 }
 
-int main()
-{
-    for(size_t index = 1; 66>= index; ++index)
-    {
-        std::cout<<fib(index)<<"\n";
-        std::cout<<fib(66-index)<<"\n";
+} //namespace v1
+} //namespace fib
 
-    }
-    return 0;
-}
-
+#endif // FIBCOMPTIME__HPP_
