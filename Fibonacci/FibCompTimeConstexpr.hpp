@@ -29,7 +29,7 @@ const unsigned long fib(unsigned int index)
 
 const unsigned long fib_static(unsigned int index)
 {
-    constexpr std::array<unsigned long, 47> Values = generateFibArray(std::make_index_sequence<47>());
+    static const std::array<unsigned long, 47> Values = generateFibArray(std::make_index_sequence<47>());
     return Values[index];
 }
 
